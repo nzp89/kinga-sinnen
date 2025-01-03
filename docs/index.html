@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謹賀新年書き初め</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .display {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>あけましておめでとうございます</h1>
+    <div id="display1" class="display">?</div>
+    <div id="display2" class="display">?</div>
+    <div id="display3" class="display">?</div>
+    <div id="display4" class="display">?</div>
+    <button onclick="showAllRandomCharacters()">書き初め</button>
+
+    <script>
+        // ランダムで表示する文字のリスト
+        const characters = ['謹', '賀', '新', '年'];
+
+        // ランダムな文字を1つの指定された<div>に表示する関数
+        function showRandomCharacter(divId) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            const randomCharacter = characters[randomIndex];
+            document.getElementById(divId).textContent = randomCharacter;
+        }
+
+        // すべての<div>にランダムな文字を表示する関数
+        function showAllRandomCharacters() {
+            showRandomCharacter('display1');
+            showRandomCharacter('display2');
+            showRandomCharacter('display3');
+            showRandomCharacter('display4');
+        }
+    </script>
+</body>
+
+</html>
