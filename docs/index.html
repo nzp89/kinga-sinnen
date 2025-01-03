@@ -17,10 +17,13 @@
             margin: 20px 0;
         }
 
-        button {
-            padding: 10px 20px;
+        .button {
+            background-color: #ffd700;
+            color: #000;
+            border-radius: 10px;
+            padding: 10px 30px;
+            text-decoration: none;
             font-size: 1em;
-            color: brown;
         }
     </style>
 </head>
@@ -31,7 +34,7 @@
     <div id="display2" class="display">?</div>
     <div id="display3" class="display">?</div>
     <div id="display4" class="display">?</div>
-    <button onclick="showAllRandomCharacters()">書き初め</button>
+    <button onclick="showAllRandomCharacters()" class="button">書き初め</button>
 
     <script>
         // ランダムで表示する文字のリスト
